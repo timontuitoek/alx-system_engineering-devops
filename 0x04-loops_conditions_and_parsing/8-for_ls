@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Script that displays content of directory in a list format
+
+list=$(ls)
+for k in $list
+do
+	echo "$k" | cut -d '-' -f2
+done
