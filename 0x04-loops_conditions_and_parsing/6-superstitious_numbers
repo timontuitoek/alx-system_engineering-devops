@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Script is displaying numbers from 1 to 20
 
-k=0
+k=1
 while ((k < 21))
 do
 	echo "$k"
