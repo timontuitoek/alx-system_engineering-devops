@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Script is displaying "Best School" 10 times
+
+k = 0
+while ((k < 10))
+do
+	echo "Best School"
+	((k++))
+done
