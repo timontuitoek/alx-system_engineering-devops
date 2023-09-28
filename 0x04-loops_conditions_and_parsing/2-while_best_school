@@ -2,8 +2,8 @@
 # Script is displaying "Best School" 10 times
 
 k = 0
-while ((k < 10))
+while (( k < 10 ))
 do
 	echo "Best School"
-	((k++))
+	(( k++ ))
 done
