@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Script that displays To infinity and beyond indefinitely with a sleep 2 in between each iteration
+# Script that displays To infinity and beyond indefinitely
 
 while true
 do
