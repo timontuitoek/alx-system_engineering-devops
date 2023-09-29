@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # Script that displays To infinity and beyond indefinitely
+#To infinity and beyond indefinitely
+#I am invincible!!! when receiving a SIGTERM signal
 
 while true
 do
