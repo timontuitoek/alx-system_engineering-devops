@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Script displays current running processes containing the bash word, allowing to get PID of Bash process
+
+ps -faux | grep "bash"
