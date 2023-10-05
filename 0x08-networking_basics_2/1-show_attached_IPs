@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# script that displays all active IPv4 IPs on the machine it’s executed on
+
+interfaces=$(ifconfig | grep -oP '^[^ ]+')
+
+for iface in $interfaces; do
+  ipv4=$(ifconfig $iface | grep -oP 'inet \K[\d.]+')
+  if [ ! -z "$ipv4" ]; then
+    echo "$ipv4"
+  fi
+done
