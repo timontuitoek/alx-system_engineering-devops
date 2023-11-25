@@ -21,9 +21,11 @@
 <p>Generating a new SSH public and private key pair on your local computer is the first step towards authenticating with a remote server without a password. Unless there is a good reason not to, you should always authenticate using SSH keys.</p>
 <p>A number of cryptographic algorithms can be used to generate SSH keys, including RSA, DSA, and ECDSA. RSA keys are generally preferred and are the default key type.</p>
 <p>To generate an RSA key pair on your local computer, type:</p>
+<pre>
 ```
 $ ssh-keygen
 $ Generating public/private rsa key pair.
 Enter file in which to save the key (/home/demo/.ssh/id_rsa):
 ```
+</pre>
 </html>
