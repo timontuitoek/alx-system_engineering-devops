@@ -60,7 +60,7 @@ The key's randomart image is:
 </pre>
 <p>This procedure has generated an RSA SSH key pair, located in the .ssh hidden directory within your user’s home directory. These files are:
 <ul>
-<l1>~/.ssh/id_rsa: The private key. DO NOT SHARE THIS FILE!</li>
+<li>~/.ssh/id_rsa: The private key. DO NOT SHARE THIS FILE!</li>
 <li>~/.ssh/id_rsa.pub: The associated public key. This can be shared freely without consequence.</li>
 </ul>
 </html>
