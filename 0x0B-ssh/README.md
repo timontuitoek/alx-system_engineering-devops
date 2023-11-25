@@ -24,10 +24,45 @@
 <pre>
 ```
 $ ssh-keygen
-```
-```
 $ Generating public/private rsa key pair.
 Enter file in which to save the key (/home/demo/.ssh/id_rsa):
 ```
 </pre>
+<p>This prompt allows you to choose the location to store your RSA private key. Press ENTER to leave this as the default, which will store them in the .ssh hidden directory in your user’s home directory. Leaving the default location selected will allow your SSH client to find the keys automatically.</p>
+<pre>
+```
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+```
+</pre>
+<p>The next prompt allows you to enter a passphrase of an arbitrary length to secure your private key. By default, you will have to enter any passphrase you set here every time you use the private key, as an additional security measure. Feel free to press ENTER to leave this blank if you do not want a passphrase. Keep in mind though that this will allow anyone who gains control of your private key to login to your servers.</p>
+<p>If you choose to enter a passphrase, nothing will be displayed as you type. This is a security precaution.</p>
+<pre>
+```
+Output
+Your identification has been saved in /root/.ssh/id_rsa.
+Your public key has been saved in /root/.ssh/id_rsa.pub.
+The key fingerprint is:
+8c:e9:7c:fa:bf:c4:e5:9c:c9:b8:60:1f:fe:1c:d3:8a root@here
+The key's randomart image is:
++--[ RSA 2048]----+
+|                 |
+|                 |
+|                 |
+|       +         |
+|      o S   .    |
+|     o   . * +   |
+|      o + = O .  |
+|       + = = +   |
+|      ....Eo+    |
++-----------------+
+```
+</pre>
+<p>This procedure has generated an RSA SSH key pair, located in the .ssh hidden directory within your user’s home directory. These files are:
+<li>
+<ul>
+<l1>~/.ssh/id_rsa: The private key. DO NOT SHARE THIS FILE!</li>
+<li>~/.ssh/id_rsa.pub: The associated public key. This can be shared freely without consequence.</li>
+</ul>
+</li>
 </html>
