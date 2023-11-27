@@ -1,6 +1,7 @@
 <html>
 <head>
 <h1>0x0C. Web server</h1>
+</head>
 <h3>Clients and servers</h3>
 <p>Computers connected to the internet are called clients and servers. A simplified diagram of how they interact might look like this:
 <br>
@@ -22,5 +23,5 @@
 <li>Assets: This is a collective name for all the other stuff that makes up a website, such as images, music, video, Word documents, and PDFs.</li>
 </ol></li>
 </ul>
-</head>
+
 </html>
