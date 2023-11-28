@@ -1,26 +1,8 @@
 #!/usr/bin/env bash
+# Installs nginx server
 
-# Update package list
-sudo apt update && sudo apt upgrade
-
-# Install Nginx
-sudo apt install -y nginx
-
-# Start Nginx
-sudo service nginx start
-
-# Display status
-sudo service nginx status
-
-# Enable Nginx to start on boot
-sudo systemctl enable nginx
-
-# Display Nginx version
-nginx -v
-
-# Display the default Nginx page URL
-echo "Nginx installed successfully. You can access the default page at http://18.210.15.7"
-
-#listen to port 80
+sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get install nginx -y
 sudo ufw allow 'Nginx HTTP'
 echo 'Hello World!' | sudo tee /var/www/html/index.html
+sudo service nginx start
