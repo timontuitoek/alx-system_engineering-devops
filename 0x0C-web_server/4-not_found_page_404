@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 # Perform nginx server install and config
 
-#!/usr/bin/env bash
-# script that performs a 404 redirection
 
 sudo apt-get update
 sudo apt-get install -y nginx
@@ -15,4 +13,3 @@ sudo sed -i "s/listen 80 default_server;/$string_to_redirect/" /etc/nginx/sites-
 echo "Ceci n'est pas une page" > /var/www/html/404.html
 
 sudo service nginx restart
-
