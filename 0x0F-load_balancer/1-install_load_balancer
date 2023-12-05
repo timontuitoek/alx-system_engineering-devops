@@ -9,7 +9,7 @@ server_config=\
 frontend  tuitoek_frontend
         bind *:80
         mode http
-        default_backend
+        default_backend tuitoek_backend
 backend tuitoek_backend
         balance roundrobin
         server 246149-web-01 118.210.15.7:80 check
