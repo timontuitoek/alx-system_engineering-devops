@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 # web static debugging
 
-sudo apt-get update
-sudo apt-get install -y nginx
-if ! systemctl is-active --quiet nginx; then sudo systemctl start nginx; echo "Nginx started."; fi
+sudo apt-get update && sudo apt-get install -y nginx
+sudo systemctl start nginx || echo "Nginx started."
 
 if ! sudo netstat -tulpn | grep -q ":80"; then
     sudo cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
