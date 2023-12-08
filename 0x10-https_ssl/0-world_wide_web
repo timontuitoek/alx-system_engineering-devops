@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
-# sets up the web servers for the deployment of web_static
+# display information about subdomains.
 
-sudo apt-get -y update
-sudo apt-get -y upgrade
-sudo apt-get -y install nginx
-sudo mkdir -p /data/web_static/releases/test /data/web_static/shared
-echo "This is a test" | sudo tee /data/web_static/releases/test/index.html
-sudo ln -sf /data/web_static/releases/test/ /data/web_static/current
-sudo chown -hR ubuntu:ubuntu /data/
-sudo sed -i '38i\\tlocation /hbnb_static/ {\n\t\talias /data/web_static/current/;\n\t}\n' /etc/nginx/sites-available/default
-sudo service nginx start
+if [ "$#" -eq 1 ];
+then
+	subdomain=("www" "lb-01" "web-01" "web-02")
+	for i in "${subdomain[@]}"
+	do
+	dig "$i"."$1"| grep -A1 'ANSWER SECTION:' | awk 'NR==2{SUB=$1; REC=$4; DEST=$5; split(SUB, subx, "."); print "The subdomain " subx[1], "is a " REC, "record and points to " DEST}';
+	done
+elif [ "$#" -eq 2 ];
+then
+	dig "$2"."$1" | grep -A1 'ANSWER SECTION:' | awk 'NR==2{SUB=$1; REC=$4; DEST=$5; split(SUB, subx, "."); print "The subdomain " subx[1], "is a " REC, "record and points to " DEST}';
+fi
