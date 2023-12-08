@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Function to display information about a subdomain
 display_info() {
@@ -7,10 +7,9 @@ display_info() {
 
     # Use dig to get DNS information and awk to extract relevant details
     local info=$(dig +short $subdomain.$domain | \
-                 awk -v sub=$subdomain -v dom=$domain \
+                 awk -v s=$subdomain -v d=$domain \
                  'NR==1 { ip = $1; } \
-                  END { print (ip == "") ? "The subdomain [" sub "] does not have a valid DNS record." : \
-                  "The subdomain [" sub "] is a " record_type " record and points to [" ip "]." }')
+                  END { print (ip == "") ? "The subdomain [" s "] does not have a valid DNS record." : "The subdomain [" s "] is a " record_type " record and points to [" ip "]." }')
 
     echo "$info"
 }
