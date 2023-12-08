@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# Function to display information about a subdomain
+display_info() {
+    local domain=$1
+    local subdomain=$2
+
+    # Use dig to get DNS information and awk to extract relevant details
+    local info=$(dig +short $subdomain.$domain | \
+                 awk -v sub=$subdomain -v dom=$domain \
+                 'NR==1 { ip = $1; } \
+                  END { print (ip == "") ? "The subdomain [" sub "] does not have a valid DNS record." : \
+                  "The subdomain [" sub "] is a " record_type " record and points to [" ip "]." }')
+
+    echo "$info"
+}
+
+# Main script logic
+
+domain=$1
+subdomains=("www" "lb-01" "web-01" "web-02")
+
+# Display information for specific subdomain or default subdomains
+for sub in "${subdomains[@]}"; do
+    display_info $domain $sub
+done
