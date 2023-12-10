@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Script: fix_nginx_port.sh
+#Script: fix_nginx_port.sh
 apt-get update
 apt-get install -y nginx
 sed -i 's/^\s*listen\s*\(.*\)/listen 80;/g' /etc/nginx/nginx.conf
