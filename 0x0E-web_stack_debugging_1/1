@@ -1,131 +1,110 @@
-Hit:1 http://ke.archive.ubuntu.com/ubuntu jammy InRelease
-Get:2 http://ke.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
-Get:3 https://apt.releases.hashicorp.com jammy InRelease [12.9 kB]
-Hit:4 https://dl.google.com/linux/chrome/deb stable InRelease
-Get:5 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
-Hit:6 https://download.docker.com/linux/ubuntu jammy InRelease
-Hit:7 http://download.virtualbox.org/virtualbox/debian jammy InRelease
-Hit:8 https://linux.teamviewer.com/deb stable InRelease
-Hit:9 http://ke.archive.ubuntu.com/ubuntu jammy-backports InRelease
-Hit:10 http://repository.spotify.com stable InRelease
-Get:11 https://apt.releases.hashicorp.com jammy/main amd64 Packages [109 kB]
-Get:12 https://dl.winehq.org/wine-builds/ubuntu focal InRelease [8,041 B]
-Get:13 https://dl.winehq.org/wine-builds/ubuntu jammy InRelease [8,041 B]
-Get:14 http://ke.archive.ubuntu.com/ubuntu jammy-updates/universe i386 Packages [675 kB]
-Err:12 https://dl.winehq.org/wine-builds/ubuntu focal InRelease
-  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 76F1A20FF987672F
-Err:13 https://dl.winehq.org/wine-builds/ubuntu jammy InRelease
-  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 76F1A20FF987672F
-Get:15 http://ke.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1,018 kB]
+Hit:1 http://ppa.launchpad.net/brightbox/ruby-ng/ubuntu focal InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu focal InRelease
+Get:3 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:6 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [1,148 kB]
+Get:7 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [29.3 kB]
+Get:8 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [3,245 kB]
+Get:9 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [3,079 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [3,754 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1,443 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [3,272 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [32.0 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [55.2 kB]
+Get:15 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [28.6 kB]
+Fetched 336 kB in 18s (19.2 kB/s)
 Reading package lists...
-W: http://download.virtualbox.org/virtualbox/debian/dists/jammy/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
-W: GPG error: https://dl.winehq.org/wine-builds/ubuntu focal InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 76F1A20FF987672F
-E: The repository 'https://dl.winehq.org/wine-builds/ubuntu focal InRelease' is not signed.
-W: GPG error: https://dl.winehq.org/wine-builds/ubuntu jammy InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 76F1A20FF987672F
-E: The repository 'https://dl.winehq.org/wine-builds/ubuntu jammy InRelease' is not signed.
-W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_dl_winehq_org_wine-builds_ubuntu_-jammy.list:1 and /etc/apt/sources.list.d/winehq-focal.sources:1
-W: Target Packages (main/binary-i386/Packages) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_dl_winehq_org_wine-builds_ubuntu_-jammy.list:1 and /etc/apt/sources.list.d/winehq-focal.sources:1
-W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_dl_winehq_org_wine-builds_ubuntu_-jammy.list:1 and /etc/apt/sources.list.d/winehq-focal.sources:1
-W: Target Translations (main/i18n/Translation-en_US) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_dl_winehq_org_wine-builds_ubuntu_-jammy.list:1 and /etc/apt/sources.list.d/winehq-focal.sources:1
-W: Target Translations (main/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_dl_winehq_org_wine-builds_ubuntu_-jammy.list:1 and /etc/apt/sources.list.d/winehq-focal.sources:1
-W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_dl_winehq_org_wine-builds_ubuntu_-jammy.list:1 and /etc/apt/sources.list.d/winehq-focal.sources:1
-W: Target DEP-11 (main/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_dl_winehq_org_wine-builds_ubuntu_-jammy.list:1 and /etc/apt/sources.list.d/winehq-focal.sources:1
-W: Target DEP-11-icons-small (main/dep11/icons-48x48.tar) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_dl_winehq_org_wine-builds_ubuntu_-jammy.list:1 and /etc/apt/sources.list.d/winehq-focal.sources:1
-W: Target DEP-11-icons (main/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_dl_winehq_org_wine-builds_ubuntu_-jammy.list:1 and /etc/apt/sources.list.d/winehq-focal.sources:1
-W: Target DEP-11-icons-hidpi (main/dep11/icons-64x64@2.tar) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_dl_winehq_org_wine-builds_ubuntu_-jammy.list:1 and /etc/apt/sources.list.d/winehq-focal.sources:1
-W: Target CNF (main/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_dl_winehq_org_wine-builds_ubuntu_-jammy.list:1 and /etc/apt/sources.list.d/winehq-focal.sources:1
-W: Target CNF (main/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list.d/archive_uri-https_dl_winehq_org_wine-builds_ubuntu_-jammy.list:1 and /etc/apt/sources.list.d/winehq-focal.sources:1
-W: Unknown Multi-Arch type 'for'ign' for package 'golang-githubmgooglecloudplatform-guest-logging-go-dev'
-E: Malformed Description-md5 line; doesn't have the required length (32 != 33) 'b6fc40ba011de2f3f9df997bw710db4eJ'
-W: You may want to run apt-get update to correct these problems
-E: The package cache file is corrupted
 Reading package lists...
 Building dependency tree...
 Reading state information...
-The following packages were automatically installed and are no longer required:
-  gconf-service gconf-service-backend gconf2-common libgconf-2-4
-Use 'sudo apt autoremove' to remove them.
 The following additional packages will be installed:
-  libnginx-mod-http-geoip2 libnginx-mod-http-image-filter
+  iproute2 libatm1 libmnl0 libnginx-mod-http-image-filter
   libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream
-  libnginx-mod-stream-geoip2 nginx-common nginx-core
+  libxslt1.1 libxtables12 nginx-common nginx-core
 Suggested packages:
-  fcgiwrap nginx-doc
+  iproute2-doc fcgiwrap nginx-doc ssl-cert
 The following NEW packages will be installed:
-  libnginx-mod-http-geoip2 libnginx-mod-http-image-filter
+  iproute2 libatm1 libmnl0 libnginx-mod-http-image-filter
   libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream
-  libnginx-mod-stream-geoip2 nginx nginx-common nginx-core
-0 upgraded, 9 newly installed, 0 to remove and 16 not upgraded.
-Need to get 697 kB of archives.
-After this operation, 2,395 kB of additional disk space will be used.
-Get:1 http://ke.archive.ubuntu.com/ubuntu jammy-updates/main amd64 nginx-common all 1.18.0-6ubuntu14.4 [40.0 kB]
-Get:2 http://ke.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-http-geoip2 amd64 1.18.0-6ubuntu14.4 [11.9 kB]
-Get:3 http://ke.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-http-image-filter amd64 1.18.0-6ubuntu14.4 [15.4 kB]
-Get:4 http://ke.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-http-xslt-filter amd64 1.18.0-6ubuntu14.4 [13.7 kB]
-Get:5 http://ke.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-mail amd64 1.18.0-6ubuntu14.4 [45.7 kB]
-Get:6 http://ke.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-stream amd64 1.18.0-6ubuntu14.4 [72.9 kB]
-Get:7 http://ke.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-stream-geoip2 amd64 1.18.0-6ubuntu14.4 [10.1 kB]
-Get:8 http://ke.archive.ubuntu.com/ubuntu jammy-updates/main amd64 nginx-core amd64 1.18.0-6ubuntu14.4 [484 kB]
-Get:9 http://ke.archive.ubuntu.com/ubuntu jammy-updates/main amd64 nginx amd64 1.18.0-6ubuntu14.4 [3,872 B]
-Preconfiguring packages ...
-Fetched 697 kB in 3s (227 kB/s)
+  libxslt1.1 libxtables12 nginx nginx-common nginx-core
+0 upgraded, 12 newly installed, 0 to remove and 258 not upgraded.
+Need to get 1,677 kB of archives.
+After this operation, 5,710 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal/main amd64 libmnl0 amd64 1.0.4-2 [12.3 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libxtables12 amd64 1.8.4-3ubuntu2.1 [28.7 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal/main amd64 iproute2 amd64 5.5.0-1ubuntu1 [858 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal/main amd64 libatm1 amd64 1:2.5.1-4 [21.8 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx-common all 1.18.0-0ubuntu1.4 [37.7 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-http-image-filter amd64 1.18.0-0ubuntu1.4 [14.8 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libxslt1.1 amd64 1.1.34-4ubuntu0.20.04.1 [151 kB]
+Get:8 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-http-xslt-filter amd64 1.18.0-0ubuntu1.4 [13.0 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-mail amd64 1.18.0-0ubuntu1.4 [42.9 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-stream amd64 1.18.0-0ubuntu1.4 [67.4 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx-core amd64 1.18.0-0ubuntu1.4 [425 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx all 1.18.0-0ubuntu1.4 [3,620 B]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 1,677 kB in 0s (5,574 kB/s)
+Selecting previously unselected package libmnl0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 76401 files and directories currently installed.)
+Preparing to unpack .../00-libmnl0_1.0.4-2_amd64.deb ...
+Unpacking libmnl0:amd64 (1.0.4-2) ...
+Selecting previously unselected package libxtables12:amd64.
+Preparing to unpack .../01-libxtables12_1.8.4-3ubuntu2.1_amd64.deb ...
+Unpacking libxtables12:amd64 (1.8.4-3ubuntu2.1) ...
+Selecting previously unselected package iproute2.
+Preparing to unpack .../02-iproute2_5.5.0-1ubuntu1_amd64.deb ...
+Unpacking iproute2 (5.5.0-1ubuntu1) ...
+Selecting previously unselected package libatm1:amd64.
+Preparing to unpack .../03-libatm1_1%3a2.5.1-4_amd64.deb ...
+Unpacking libatm1:amd64 (1:2.5.1-4) ...
 Selecting previously unselected package nginx-common.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 355205 files and directories currently installed.)
-Preparing to unpack .../0-nginx-common_1.18.0-6ubuntu14.4_all.deb ...
-Unpacking nginx-common (1.18.0-6ubuntu14.4) ...
-Selecting previously unselected package libnginx-mod-http-geoip2.
-Preparing to unpack .../1-libnginx-mod-http-geoip2_1.18.0-6ubuntu14.4_amd64.deb ...
-Unpacking libnginx-mod-http-geoip2 (1.18.0-6ubuntu14.4) ...
+Preparing to unpack .../04-nginx-common_1.18.0-0ubuntu1.4_all.deb ...
+Unpacking nginx-common (1.18.0-0ubuntu1.4) ...
 Selecting previously unselected package libnginx-mod-http-image-filter.
-Preparing to unpack .../2-libnginx-mod-http-image-filter_1.18.0-6ubuntu14.4_amd64.deb ...
-Unpacking libnginx-mod-http-image-filter (1.18.0-6ubuntu14.4) ...
+Preparing to unpack .../05-libnginx-mod-http-image-filter_1.18.0-0ubuntu1.4_amd64.deb ...
+Unpacking libnginx-mod-http-image-filter (1.18.0-0ubuntu1.4) ...
+Selecting previously unselected package libxslt1.1:amd64.
+Preparing to unpack .../06-libxslt1.1_1.1.34-4ubuntu0.20.04.1_amd64.deb ...
+Unpacking libxslt1.1:amd64 (1.1.34-4ubuntu0.20.04.1) ...
 Selecting previously unselected package libnginx-mod-http-xslt-filter.
-Preparing to unpack .../3-libnginx-mod-http-xslt-filter_1.18.0-6ubuntu14.4_amd64.deb ...
-Unpacking libnginx-mod-http-xslt-filter (1.18.0-6ubuntu14.4) ...
+Preparing to unpack .../07-libnginx-mod-http-xslt-filter_1.18.0-0ubuntu1.4_amd64.deb ...
+Unpacking libnginx-mod-http-xslt-filter (1.18.0-0ubuntu1.4) ...
 Selecting previously unselected package libnginx-mod-mail.
-Preparing to unpack .../4-libnginx-mod-mail_1.18.0-6ubuntu14.4_amd64.deb ...
-Unpacking libnginx-mod-mail (1.18.0-6ubuntu14.4) ...
+Preparing to unpack .../08-libnginx-mod-mail_1.18.0-0ubuntu1.4_amd64.deb ...
+Unpacking libnginx-mod-mail (1.18.0-0ubuntu1.4) ...
 Selecting previously unselected package libnginx-mod-stream.
-Preparing to unpack .../5-libnginx-mod-stream_1.18.0-6ubuntu14.4_amd64.deb ...
-Unpacking libnginx-mod-stream (1.18.0-6ubuntu14.4) ...
-Selecting previously unselected package libnginx-mod-stream-geoip2.
-Preparing to unpack .../6-libnginx-mod-stream-geoip2_1.18.0-6ubuntu14.4_amd64.deb ...
-Unpacking libnginx-mod-stream-geoip2 (1.18.0-6ubuntu14.4) ...
+Preparing to unpack .../09-libnginx-mod-stream_1.18.0-0ubuntu1.4_amd64.deb ...
+Unpacking libnginx-mod-stream (1.18.0-0ubuntu1.4) ...
 Selecting previously unselected package nginx-core.
-Preparing to unpack .../7-nginx-core_1.18.0-6ubuntu14.4_amd64.deb ...
-Unpacking nginx-core (1.18.0-6ubuntu14.4) ...
+Preparing to unpack .../10-nginx-core_1.18.0-0ubuntu1.4_amd64.deb ...
+Unpacking nginx-core (1.18.0-0ubuntu1.4) ...
 Selecting previously unselected package nginx.
-Preparing to unpack .../8-nginx_1.18.0-6ubuntu14.4_amd64.deb ...
-Unpacking nginx (1.18.0-6ubuntu14.4) ...
-Setting up nginx-common (1.18.0-6ubuntu14.4) ...
+Preparing to unpack .../11-nginx_1.18.0-0ubuntu1.4_all.deb ...
+Unpacking nginx (1.18.0-0ubuntu1.4) ...
+Setting up nginx-common (1.18.0-0ubuntu1.4) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
 Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /lib/systemd/system/nginx.service.
-Setting up libnginx-mod-http-xslt-filter (1.18.0-6ubuntu14.4) ...
-Setting up libnginx-mod-http-geoip2 (1.18.0-6ubuntu14.4) ...
-Setting up libnginx-mod-mail (1.18.0-6ubuntu14.4) ...
-Setting up libnginx-mod-http-image-filter (1.18.0-6ubuntu14.4) ...
-Setting up libnginx-mod-stream (1.18.0-6ubuntu14.4) ...
-Setting up libnginx-mod-stream-geoip2 (1.18.0-6ubuntu14.4) ...
-Setting up nginx-core (1.18.0-6ubuntu14.4) ...
- * Upgrading binary nginx       [80G [74G[ OK ]
-Setting up nginx (1.18.0-6ubuntu14.4) ...
-Processing triggers for man-db (2.10.2-1) ...
-Processing triggers for ufw (0.36.1-4ubuntu0.1) ...
-● nginx.service - A high performance web server and a reverse proxy server
-     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
-     Active: active (running) since Thu 2023-12-07 15:47:32 EAT; 22ms ago
-       Docs: man:nginx(8)
-    Process: 28911 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
-    Process: 28912 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
-   Main PID: 28913 (nginx)
-      Tasks: 5 (limit: 9285)
-     Memory: 4.8M
-        CPU: 54ms
-     CGroup: /system.slice/nginx.service
-             ├─28913 "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;"
-             ├─28914 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
-             ├─28915 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
-             ├─28916 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
-             └─28917 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
-
-Des 07 15:47:32 timm-HP-ProBook-640-G2 systemd[1]: Starting A high performance web server and a reverse proxy server...
-Des 07 15:47:32 timm-HP-ProBook-640-G2 systemd[1]: Started A high performance web server and a reverse proxy server.
+Setting up libatm1:amd64 (1:2.5.1-4) ...
+Setting up libmnl0:amd64 (1.0.4-2) ...
+Setting up libxtables12:amd64 (1.8.4-3ubuntu2.1) ...
+Setting up libxslt1.1:amd64 (1.1.34-4ubuntu0.20.04.1) ...
+Setting up libnginx-mod-mail (1.18.0-0ubuntu1.4) ...
+Setting up iproute2 (5.5.0-1ubuntu1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+Setting up libnginx-mod-http-image-filter (1.18.0-0ubuntu1.4) ...
+Setting up libnginx-mod-stream (1.18.0-0ubuntu1.4) ...
+Setting up libnginx-mod-http-xslt-filter (1.18.0-0ubuntu1.4) ...
+Setting up nginx-core (1.18.0-0ubuntu1.4) ...
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Setting up nginx (1.18.0-0ubuntu1.4) ...
+Processing triggers for systemd (245.4-4ubuntu3.15) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.7) ...
+ * Restarting nginx nginx
+   ...done.
