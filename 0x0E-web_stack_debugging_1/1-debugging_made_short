@@ -1,4 +1,7 @@
-#!/bin/bash
-if ! systemctl status nginx | grep -q "active (running)"; then
-    echo "nginx is not running"
-fi
+#!/usr/bin/env bash
+# Script: fix_nginx_port.sh
+apt-get update
+apt-get install -y nginx
+sed -i 's/^\s*listen\s*\(.*\)/listen 80;/g' /etc/nginx/nginx.conf
+nginx -s reload
+
