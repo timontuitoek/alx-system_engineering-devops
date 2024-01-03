@@ -2,22 +2,9 @@
 # -*- coding: utf-8 -*-
 
 """
-Script to get employee TODO list progress using a REST API and export data in JSON format.
-
-Usage:
-    python script.py <employee_id>
-
-Arguments:
-    employee_id (int): The ID of the employee.
-
-Requirements:
-    - urllib or requests module
-    - pycodestyle (version 2.8.*)
-
-Example:
-    python script.py 1
+Script to get employee TODO list progress
+using a REST API and export data in JSON format.
 """
-
 import json
 import requests
 import sys
