@@ -5,9 +5,9 @@ Script to get employee TODO list progress
 using a REST API and export data in CSV format.
 """
 
+import csv
 import requests
 import sys
-import csv
 
 
 if __name__ == "__main__":
