@@ -1,33 +1,18 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-
 """
-Script to get employee TODO list progress using a REST API and export data in CSV format.
-
-Usage:
-    python script.py <employee_id>
-
-Arguments:
-    employee_id (int): The ID of the employee.
-
-Requirements:
-    - urllib or requests module
-    - pycodestyle (version 2.8.*)
-
-Example:
-    python script.py 1
+Script to get employee TODO list progress
+using a REST API and export data in CSV format.
 """
 
 import requests
 import sys
 import csv
 
+
 def get_employee_todo_progress(employee_id):
     """
     Get employee TODO list progress and export data in CSV format.
-
-    Args:
-        employee_id (int): The ID of the employee.
     """
     base_url = "https://jsonplaceholder.typicode.com"
     user_url = f"{base_url}/users/{employee_id}"
@@ -46,7 +31,12 @@ def get_employee_todo_progress(employee_id):
     # Create CSV file
     csv_file_name = f"{user_id}.csv"
     with open(csv_file_name, mode='w', newline='') as csv_file:
-        fieldnames = ['USER_ID', 'USERNAME', 'TASK_COMPLETED_STATUS', 'TASK_TITLE']
+        fieldnames = [
+            'USER_ID',
+            'USERNAME',
+            'TASK_COMPLETED_STATUS',
+            'TASK_TITLE'
+        ]
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
 
         # Write CSV header
@@ -54,12 +44,18 @@ def get_employee_todo_progress(employee_id):
 
         # Write each task to CSV
         for todo in todos_data:
-            task_completed_status = "Completed" if todo.get("completed") else "Not Completed"
+            task_completed_status = "Completed" \
+                if todo.get("completed") else "Not Completed"
             task_title = todo.get("title")
-            writer.writerow({'USER_ID': user_id, 'USERNAME': employee_name,
-                             'TASK_COMPLETED_STATUS': task_completed_status, 'TASK_TITLE': task_title})
+            writer.writerow({
+                'USER_ID': user_id,
+                'USERNAME': employee_name,
+                'TASK_COMPLETED_STATUS': task_completed_status,
+                'TASK_TITLE': task_title
+            })
 
     print(f"CSV file '{csv_file_name}' created successfully!")
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
