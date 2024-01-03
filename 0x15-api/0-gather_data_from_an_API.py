@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
-
 """
 Script to get employee TODO list progress using a REST API.
 """
