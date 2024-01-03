@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """
-Script to get employee TODO list using a REST API.
+Script to get employee TODO list
+progress using a REST API.
 """
-
-
 import requests
 import sys
 
