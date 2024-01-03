@@ -3,23 +3,12 @@
 
 """
 Script to get employee TODO list progress using a REST API.
-
-Usage:
-    python script.py <employee_id>
-
-Arguments:
-    employee_id (int): The ID of the employee.
-
-Requirements:
-    - urllib or requests module
-    - pycodestyle (version 2.8.*)
-
-Example:
-    python script.py 1
 """
+
 
 import requests
 import sys
+
 
 def get_employee_todo_progress(employee_id):
     """
@@ -46,7 +35,8 @@ def get_employee_todo_progress(employee_id):
     completed_tasks = sum(1 for todo in todos_data if todo.get("completed"))
 
     # Display progress information
-    print(f"Employee {employee_name} is done with tasks ({completed_tasks}/{total_tasks}):")
+    print(f"Employee {employee_name} is done with tasks /"
+          f"({completed_tasks}/{total_tasks}): ")
     print(f"{employee_name}: {completed_tasks}/{total_tasks}")
 
     # Display completed tasks titles
@@ -54,7 +44,9 @@ def get_employee_todo_progress(employee_id):
         if todo.get("completed"):
             print(f"\t{todo['title']}")
 
+
 if __name__ == "__main__":
+
     if len(sys.argv) != 2:
         print("Usage: python script.py <employee_id>")
         sys.exit(1)
