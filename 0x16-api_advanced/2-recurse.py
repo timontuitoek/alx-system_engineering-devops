@@ -27,7 +27,7 @@ def recurse(subreddit, hot_list=None, after=None):
             posts = data['data']['children']
 
             if not posts:
-                return hot_list  # Return the final list when no more posts are available
+                return hot_list
 
             for post in posts:
                 title = post['data']['title']
