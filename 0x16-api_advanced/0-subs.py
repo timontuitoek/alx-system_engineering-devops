@@ -39,5 +39,4 @@ if __name__ == "__main__":
     # Example usage:
     subreddit_name = 'python'
     subscribers_count = number_of_subscribers(subreddit_name)
-    print(f"The number of subscribers in r/{subreddit_name}:
-          {subscribers_count}")
+    print(f"The number of subscribers in r/{subreddit_name}: {subscribers_count}")
