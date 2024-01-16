@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-
 """
-This script queries the Reddit API.
+Module to interact with the Reddit API.
 """
 
 import requests
@@ -9,36 +8,24 @@ import requests
 
 def top_ten(subreddit):
     """
-    Print the titles of the first 10 hot posts for a given subreddit.
+    Retrieve and print the titles of the first 10 hot posts in a subreddit.
+        None
     """
-    url = f"https://www.reddit.com/r/{subreddit}/hot.json"
-    headers = {'User-Agent': 'your_custom_user_agent'}
+    # Reddit API endpoint for getting hot posts in a subreddit
+    url = f'https://www.reddit.com/r/{subreddit}/hot.json?limit=10'
 
-    try:
-        response = requests.get(url, headers=headers)
+    # Send a GET request to the Reddit API
+    response = requests.get(url, headers={'User-agent': 'your_bot_name'})
 
-        # Check if the request was successful (status code 200)
-        if response.status_code == 200:
-            # Parse the JSON response and extract post titles
-            data = response.json()
-            posts = data['data']['children'][:10]  # Extract the first 10 posts
+    # Check if the request was successful (status code 200)
+    if response.status_code == 200:
+        # Parse the JSON response
+        data = response.json()
 
-            if not posts:
-                print("No hot posts found.")
-            else:
-                print(f"Top 10 hot posts in r/{subreddit}:\n")
-                for post in posts:
-                    title = post['data']['title']
-                    print(f"• {title}")
-        elif response.status_code == 404:
-            # Subreddit not found, print None
-            print(None)
-        else:
-            # Other error, print None
-            print(None)
-
-    except Exception as e:
-        print(f"An error occurred: {e}")
+        # Extract and print the titles of the first 10 hot posts
+        for post in data['data']['children']:
+            print(post['data']['title'])
+    else:
         print(None)
 
 
