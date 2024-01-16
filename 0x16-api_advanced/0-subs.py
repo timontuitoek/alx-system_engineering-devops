@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-This script queries the Reddit API and returns the number of subscribers for a given subreddit.
+This script queries the Reddit API.
 """
 
 import requests
@@ -39,4 +39,5 @@ if __name__ == "__main__":
     # Example usage:
     subreddit_name = 'python'
     subscribers_count = number_of_subscribers(subreddit_name)
-    print(f"The number of subscribers in r/{subreddit_name}: {subscribers_count}")
+    print(f"The number of subscribers in r/{subreddit_name}:
+          {subscribers_count}")
