@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 This script queries the Reddit.
 """
@@ -36,7 +35,6 @@ def number_of_subscribers(subreddit):
 
 
 if __name__ == "__main__":
-    # Example usage:
     subreddit_name = 'python'
     subscribers_count = number_of_subscribers(subreddit_name)
     print(f"The number of subscribers
